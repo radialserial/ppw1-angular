@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PAGES } from 'src/app/pages';
+import { PAGES } from 'src/app/util/pages';
 
 @Component({
   selector: 'app-menu',
