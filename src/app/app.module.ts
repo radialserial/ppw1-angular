@@ -8,6 +8,7 @@ import { ManualComponent } from './pages/manual/manual.component';
 import { BackComponent } from './util/back/back.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { TopComponent } from './util/top/top.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
     ManualComponent,
     BackComponent,
     QuizComponent,
-    FormularioComponent
+    FormularioComponent,
+    TopComponent,
   ],
   imports: [
     BrowserModule,
