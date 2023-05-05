@@ -8,9 +8,9 @@ describe('ManualComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ManualComponent ]
+      declarations: [ManualComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ManualComponent);
     component = fixture.componentInstance;

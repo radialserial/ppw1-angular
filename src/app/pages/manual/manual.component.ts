@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
+import { Page } from 'src/app/util/page';
+import { MANUAL_PAGES } from './manualPages';
 
 @Component({
   selector: 'app-manual',
@@ -8,6 +9,21 @@ import { Location } from '@angular/common';
 })
 export class ManualComponent {
 
-  constructor(private location: Location) { }
+  selectedPageId: number = 0;
+  manualPages: Page[] = MANUAL_PAGES;
+
+  constructor() { }
+
+  selectPage(id: number) {
+    this.selectedPageId = id;
+  }
+
+  nextPage() {
+    this.selectedPageId++;
+  }
+
+  previousPage() {
+    this.selectedPageId--;
+  }
 
 }
