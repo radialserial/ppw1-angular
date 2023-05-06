@@ -3,7 +3,7 @@
 <ul>
   <span *ngFor="let question of questions">
     <li *ngIf="currentQuestion === question.id">
-      <label for="q-{{question.id}}">Questão {{question.id+1}} {{question.description}}</label>
+      <label for="q-{{question.id}}">Questão {{question.id+1}} - {{question.description}}</label>
       <br>
       <span id="q-{{question.id}}" *ngFor="let answer of question.answers">
         <button id="answer-q-{{answer.id}}" class="btn" (click)="nextQuestion(answer.id)">{{answer.id}}</button>
