@@ -1,9 +1,9 @@
 <h1>Páginas</h1>
 
 <nav>
-  <ul>
+  <ul class="li-menu">
     <li *ngFor="let page of pages">
-      <button type="button" routerLink="/{{page.link}}">{{page.name}}</button>
+      <button class="btn btn-menu" type="button" routerLink="/{{page.link}}">{{page.name}}</button>
     </li>
   </ul>
 </nav>

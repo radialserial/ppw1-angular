@@ -36,14 +36,17 @@
   --yellow: #F1FA8C;
 }
 
+* {
+  font-family: Tex Gyre Adventor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-  font-family: "Tex Gyre Adventor", sans-serif;
   font-size: 20px;
   color: var(--foreground);
   background-color: var(--background);
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   min-height: 400px;
   margin-bottom: 100px;
   clear: both;
@@ -69,4 +72,47 @@ p {
   background-color: var(--current-line);
   overflow: auto;
   white-space: nowrap;
+}
+
+.btn {
+  color: var(--foreground);
+  background-color: var(--current-line);
+  border: 0px;
+  padding: 20px;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--comment);
+  transition-duration: 0s;
+}
+
+.btn:active {
+  background-color: var(--pink);
+  color: var(--background);
+}
+
+.btn-menu {
+  width: 100%;
+  font-size: large;
+}
+
+.li-menu {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  color: var(--current-line);
+}
+
+fieldset {
+  border: 1px solid var(--current-line);
+}
+
+legend {
+  font-size: medium;
 }

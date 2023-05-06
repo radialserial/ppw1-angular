@@ -2,9 +2,9 @@
 
 <nav *ngIf="selectedPageId == 0">
   <h1>Manual</h1>
-  <ul>
+  <ul class="li-menu">
     <li *ngFor="let page of manualPages">
-      <button type="button" (click)="selectPage(page.id)">{{page.name}}</button>
+      <button class="btn-menu btn" type="button" (click)="selectPage(page.id)">{{page.name}}</button>
     </li>
   </ul>
 </nav>
@@ -140,7 +140,7 @@
 </div>
 
 <div *ngIf="selectedPageId==3">
-  <figure class="imagem-topo">
+  <figure>
     <img src="assets/media/image/css.png" alt="Logo do CSS" title="CSS" height="400px">
     <figcaption>Cascading Style Sheets.</figcaption>
   </figure>
@@ -182,7 +182,7 @@ footer {{"{"}}
 
 <div *ngIf="selectedPageId==4">
 
-  <figure class="imagem-topo">
+  <figure>
     <img src="assets/media/image/js.png" alt="Logo do JavaScript" title="JS" height="400px">
     <figcaption>JavaScript.</figcaption>
   </figure>
@@ -228,7 +228,7 @@ xmlhttp.send();
 
 <div *ngIf="selectedPageId==5">
 
-  <figure class="imagem-topo">
+  <figure>
     <img src="assets/media/image/node.png" alt="Logo da framework Node JS" title="Node JS" height="200px">
     <img src="assets/media/image/spring.png" alt="Logo da framework Spring" title="Spring" height="200px">
     <img src="assets/media/image/react.png" alt="Logo da framework React" title="React" height="200px">
@@ -259,7 +259,7 @@ xmlhttp.send();
 </div>
 
 <div class="rodape" *ngIf="selectedPageId!=0">
-  <button class="dracula btn-nav btn-prox" (click)="previousPage()" *ngIf="selectedPageId>=1">←</button>
+  <button class="btn" (click)="previousPage()" *ngIf="selectedPageId>=1">←</button>
   <app-top></app-top>
-  <button class="dracula btn-nav btn-prox" (click)="nextPage()" *ngIf="selectedPageId<=4">→</button>
+  <button class="btn" (click)="nextPage()" *ngIf="selectedPageId<=4">→</button>
 </div>
