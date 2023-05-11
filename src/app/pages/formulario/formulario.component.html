@@ -3,27 +3,28 @@
   <hr>
   <fieldset>
     <legend style="font-size: 2em;">Informações</legend>
-    <form>
 
-      <label for="nome">Nome: </label>
-      <input type="text" name="nome" id="t-nome">
+    <form>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Nome</mat-label>
+        <input matInput>
+      </mat-form-field>
       <br>
 
-      <label for="radios-generio">Gênero:</label>
+      <label for="radios-genero">Gênero:</label>
       <div id="radios-generio">
-        <input type="radio" name="genero" id="r-g-masc">
-        <label for="r-g-masc">Masculino</label> <br>
-        <input type="radio" name="genero" id="r-g-fem">
-        <label for="r-g-fem">Feminino</label> <br>
-        <input type="radio" name="genero" id="r-g-outro">
-        <label for="r-g-outro">Outro</label> <br>
+        <mat-radio-group aria-label="Gênero:">
+          <mat-radio-button value="masc">Masculino</mat-radio-button>
+          <mat-radio-button value="fem">Feminino</mat-radio-button>
+          <mat-radio-button value="outro">Outro</mat-radio-button>
+        </mat-radio-group>
       </div>
 
-      <input type="checkbox" name="casado" id="cb-casado">
-      <label for="cb-casado">Casado/a?</label> <br>
+      <section class="example-section">
+        <mat-checkbox>Casado/a?</mat-checkbox>
+      </section>
 
-      <input class="btn" type="submit" name="submit-info" id="submit-btn" value="Enviar">
-
+      <button mat-flat-button color="primary" type="submit">Enviar</button>
     </form>
   </fieldset>
 </div>

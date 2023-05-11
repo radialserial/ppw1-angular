@@ -3,7 +3,7 @@
 <nav>
   <ul class="li-menu">
     <li *ngFor="let page of pages">
-      <button class="btn btn-menu" type="button" routerLink="/{{page.link}}">{{page.name}}</button>
+      <button class="btn-menu" mat-flat-button color="primary" routerLink="/{{page.link}}">{{page.name}}</button>
     </li>
   </ul>
 </nav>

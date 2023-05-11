@@ -2,15 +2,22 @@
 
 <ul>
   <span *ngFor="let question of questions">
+
     <li *ngIf="currentQuestion === question.id">
+
       <label for="q-{{question.id}}">Questão {{question.id+1}} - {{question.description}}</label>
+
       <br>
+
       <span id="q-{{question.id}}" *ngFor="let answer of question.answers">
-        <button id="answer-q-{{answer.id}}" class="btn" (click)="nextQuestion(answer.id)">{{answer.id}}</button>
+        <button id="answer-q-{{answer.id}}" mat-fab color="primary"
+          (click)="nextQuestion(answer.id)">{{answer.id}}</button>
         <label for="answer-q-{{answer.id}}">{{answer.description}}</label>
         <br>
       </span>
+
       <br>
+
     </li>
   </span>
 </ul>

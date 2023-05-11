@@ -1,5 +1,6 @@
 @import "prismjs/plugins/toolbar/prism-toolbar.css";
 @import "dracula-prism/dist/css/dracula-prism.css";
+@import "/dracula-material-theme";
 
 @font-face {
   font-family: "Tex Gyre Adventor";
@@ -83,23 +84,8 @@ p {
   }
 }
 
-.btn {
-  color: $foreground;
-  background-color: $current-line;
-  border: 0px;
-  padding: 20px;
-  transition-duration: 0.1s;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: $comment;
-  transition-duration: 0s;
-}
-
-.btn:active {
-  background-color: $pink;
-  color: $background;
+button[mat-flat-button] {
+  border-radius: 0;
 }
 
 .btn-menu {

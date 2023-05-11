@@ -4,7 +4,8 @@
   <h1>Manual</h1>
   <ul class="li-menu">
     <li *ngFor="let page of manualPages">
-      <button class="btn-menu btn" type="button" (click)="selectPage(page.id)">{{page.name}}</button>
+      <button mat-flat-button color="primary" class="btn-menu btn" type="button"
+        (click)="selectPage(page.id)">{{page.name}}</button>
     </li>
   </ul>
 </nav>
@@ -247,7 +248,7 @@
 </div>
 
 <div class="rodape" *ngIf="selectedPageId!=0">
-  <button class="btn" (click)="previousPage()" *ngIf="selectedPageId>=1">←</button>
+  <button mat-flat-button color="primary" (click)="previousPage()" *ngIf="selectedPageId>=1">←</button>
   <app-top></app-top>
-  <button class="btn" (click)="nextPage()" *ngIf="selectedPageId<=4">→</button>
+  <button mat-flat-button color="primary" (click)="nextPage()" *ngIf="selectedPageId<=4">→</button>
 </div>

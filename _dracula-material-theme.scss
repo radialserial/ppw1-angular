@@ -1,0 +1,35 @@
+@use "@angular/material" as mat;
+@import "@angular/material/theming";
+@include mat-core();
+@import "palette-generator";
+
+$primary-color: #44475a;
+$accent-color: #ff79c6;
+$warn-color: #ff5555;
+
+$primary-palette: createPalette($primary-color);
+$accent-palette: createPalette($accent-color);
+$warn-palette: createPalette($warn-color);
+
+$primary: mat-palette($primary-palette);
+$warn: mat-palette($warn-palette);
+$accent: mat-palette($accent-palette);
+
+// Pick one
+$theme: mat-dark-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    ),
+    density: 0,
+  )
+);
+// $theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+@function color($palette, $color) {
+  @return mat.get-color-from-palette($palette, $color);
+}

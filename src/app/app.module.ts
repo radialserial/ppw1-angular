@@ -10,6 +10,12 @@ import { QuizComponent } from './pages/quiz/quiz.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { TopComponent } from './util/top/top.component';
 import { HighlightService } from './util/prism.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,13 @@ import { HighlightService } from './util/prism.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatCheckboxModule,
   ],
   providers: [
     HighlightService,
