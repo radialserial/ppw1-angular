@@ -90,22 +90,18 @@
   </p>
 
   <div class="codigo">
-    <pre>
-      <code>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    <pre class="language-html"><code>    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
 
-&lt;/body&gt;
-&lt;/html&gt;
-      </code>
-    </pre>
+    &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
   </div>
 
   <p>
@@ -157,18 +153,14 @@
   </p>
 
   <div class="codigo">
-    <pre>
-      <code>
-footer {{"{"}}
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #282A36;
-{{"}"}}
-      </code>
-    </pre>
+    <pre><code class="language-css">    footer {{"{"}}
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background-color: #282A36;
+    {{"}"}}</code></pre>
   </div>
 
   <p>
@@ -200,23 +192,19 @@ footer {{"{"}}
   </p>
 
   <div class="codigo">
-    <code>
-      <pre>
-const obj = {{"{"}} "limit":10 {{"}"}};
-const dbParam = JSON.stringify(obj);
-const xmlhttp = new XMLHttpRequest();
-xmlhttp.onload = function() {{"{"}}
-    myObj = JSON.parse(this.responseText);
-    let text = ""
-    for (let x in myObj) {{"{"}}
-        text += myObj[x].name + "&lt;br&gt;";
-    {{"}"}}
-    document.getElementById("demo").innerHTML = text;
-{{"}"}};
-xmlhttp.open("GET", "json_demo_db.php?x=" + dbParam);
-xmlhttp.send();
-      </pre>
-    </code>
+    <pre class="language-javascript"><code>    const obj = {{"{"}} "limit":10 {{"}"}};
+    const dbParam = JSON.stringify(obj);
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function() {{"{"}}
+        myObj = JSON.parse(this.responseText);
+        let text = ""
+        for (let x in myObj) {{"{"}}
+            text += myObj[x].name + "&lt;br&gt;";
+        {{"}"}}
+        document.getElementById("demo").innerHTML = text;
+    {{"}"}};
+    xmlhttp.open("GET", "json_demo_db.php?x=" + dbParam);
+    xmlhttp.send();</code></pre>
   </div>
   <p>
     O exemplo acima descreve a operação necessária para recuperar dados de uma base de dados. Gerência de bases
