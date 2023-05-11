@@ -112,3 +112,10 @@ fieldset {
 legend {
   font-size: medium;
 }
+
+a {
+  color: $pink;
+  &:visited {
+    color: $purple;
+  }
+}
