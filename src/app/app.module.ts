@@ -9,6 +9,7 @@ import { BackComponent } from './util/back/back.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { TopComponent } from './util/top/top.component';
+import { HighlightService } from './util/prism.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { TopComponent } from './util/top/top.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HighlightService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

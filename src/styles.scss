@@ -1,40 +1,41 @@
+@import "prismjs/plugins/toolbar/prism-toolbar.css";
+@import "dracula-prism/dist/css/dracula-prism.css";
+
 @font-face {
   font-family: "Tex Gyre Adventor";
-  src: url('assets/fonts/texgyreadventor-regular.otf');
+  src: url("assets/fonts/texgyreadventor-regular.otf");
 }
 
 @font-face {
   font-family: "Tex Gyre Adventor";
-  src: url('assets/fonts/texgyreadventor-bold.otf');
+  src: url("assets/fonts/texgyreadventor-bold.otf");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Tex Gyre Adventor";
-  src: url('assets/fonts/texgyreadventor-italic.otf');
+  src: url("assets/fonts/texgyreadventor-italic.otf");
   font-style: italic;
 }
 
 @font-face {
   font-family: "Tex Gyre Adventor";
-  src: url('assets/fonts/texgyreadventor-bolditalic.otf');
+  src: url("assets/fonts/texgyreadventor-bolditalic.otf");
   font-weight: bold;
   font-style: italic;
 }
 
-:root {
-  --background: #282A36;
-  --current-line: #44475A;
-  --foreground: #F8F8F2;
-  --comment: #6272A4;
-  --cyan: #8BE9FD;
-  --green: #50FA7B;
-  --orange: #FFB86C;
-  --pink: #FF79C6;
-  --purple: #BD93F9;
-  --red: #FF5555;
-  --yellow: #F1FA8C;
-}
+$background: #282a36;
+$current-line: #44475a;
+$foreground: #f8f8f2;
+$comment: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
 
 * {
   font-family: Tex Gyre Adventor;
@@ -44,12 +45,13 @@
 
 body {
   font-size: 20px;
-  color: var(--foreground);
-  background-color: var(--background);
+  color: $foreground;
+  background-color: $background;
   box-sizing: border-box;
   min-height: 400px;
   margin-bottom: 100px;
   clear: both;
+  text-align: justify;
 }
 
 p {
@@ -65,18 +67,25 @@ p {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: #282A36;
+  background-color: $background;
 }
 
 .codigo {
-  background-color: var(--current-line);
-  overflow: auto;
-  white-space: nowrap;
+  * {
+    font-family: monospace;
+  }
+  .copy-to-clipboard-button {
+    width: 100%;
+    height: 0;
+  }
+  .line-numbers-rows {
+    margin-left: 50px;
+  }
 }
 
 .btn {
-  color: var(--foreground);
-  background-color: var(--current-line);
+  color: $foreground;
+  background-color: $current-line;
   border: 0px;
   padding: 20px;
   transition-duration: 0.1s;
@@ -84,13 +93,13 @@ p {
 }
 
 .btn:hover {
-  background-color: var(--comment);
+  background-color: $comment;
   transition-duration: 0s;
 }
 
 .btn:active {
-  background-color: var(--pink);
-  color: var(--background);
+  background-color: $pink;
+  color: $background;
 }
 
 .btn-menu {
@@ -106,11 +115,11 @@ p {
 }
 
 hr {
-  color: var(--current-line);
+  color: $current-line;
 }
 
 fieldset {
-  border: 1px solid var(--current-line);
+  border: 1px solid $current-line;
 }
 
 legend {
