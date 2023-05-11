@@ -4,16 +4,16 @@
   <fieldset>
     <legend style="font-size: 2em;">Informações</legend>
 
-    <form>
+    <form method="get">
       <mat-form-field appearance="outline" color="accent">
         <mat-label>Nome</mat-label>
-        <input matInput>
+        <input name="nome" matInput>
       </mat-form-field>
       <br>
 
       <label for="radios-genero">Gênero:</label>
       <div id="radios-generio">
-        <mat-radio-group aria-label="Gênero:">
+        <mat-radio-group name="genero" aria-label="Gênero:">
           <mat-radio-button value="masc">Masculino</mat-radio-button>
           <mat-radio-button value="fem">Feminino</mat-radio-button>
           <mat-radio-button value="outro">Outro</mat-radio-button>
@@ -21,7 +21,7 @@
       </div>
 
       <section class="example-section">
-        <mat-checkbox>Casado/a?</mat-checkbox>
+        <mat-checkbox name="casado">Casado/a?</mat-checkbox>
       </section>
 
       <button mat-flat-button color="primary" type="submit">Enviar</button>
