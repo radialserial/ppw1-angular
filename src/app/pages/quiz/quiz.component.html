@@ -5,7 +5,8 @@
 
     <li *ngIf="currentQuestion === question.id">
 
-      <label for="q-{{question.id}}">Questão {{question.id+1}} - {{question.description}}</label>
+      <label for="q-{{question.id}}">Questão {{question.id+1}}:<br><br>
+        {{question.description}}</label>
 
       <br>
 
